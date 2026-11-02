@@ -23,19 +23,19 @@ body{
     left:50%;
     z-index:1;
     transform:translate(-50%);
-    top:18%;
+    top:26%;
 
-    filter: brightness(0.8);
+    filter: brightness(1);
 
     height: auto; /* mantém a proporção da imagem */
-    width: 90%;
+    width: 60%;
 }
 
 .content{
     display:flex;
     justify-content: center;
     align-items: center;
-    gap: 60px; /* espaço entre os botões */
+    gap: 50px; /* espaço entre os botões */
     
     position: fixed; /* necessário para o z-index e top funcionar */
     z-index: 2; /* maior que o escudo */
@@ -45,14 +45,17 @@ body{
     border-radius: 20px;
     background-color: rgba(86, 179, 255, 0.295);
 
-    padding: 3%;
-    zoom:250%;
+    padding: 2%;
+    zoom:270%;
 }
 
 button{
     border: 3px solid rgba(32, 203, 255, 0.573);
     border-radius: 11px;
+    color: rgba(0, 40, 101, 0.758);
+    font-family: fantasy;
     padding: 3px;
+    zoom:125%;
 
     background-color:rgba(70, 209, 247, 0.537);
 }
