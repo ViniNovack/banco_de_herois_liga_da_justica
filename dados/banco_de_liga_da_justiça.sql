@@ -9,6 +9,6 @@ create table ahqs(
     origem text not null,
     identidade_secreta varchar(45) not null,
     equipe varchar(60) not null,
-    classificacao int not null,
+    classificacao enum('urbano', 'cósmico', 'ômega', 'velocista', 'amazona', 'lanterna', 'mágico', 'mitológico', 'cientista') not null,
     primary key(id)
 );

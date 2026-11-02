@@ -4,6 +4,10 @@ body{
     background-position: center; /* centraliza a imagem */
     background-repeat: no-repeat; /* evita repetição */
     background-attachment: fixed; /* a imagem fica parada ao rolar a página */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .escudo{
@@ -12,4 +16,48 @@ body{
     z-index: 1; /* fica acima do fundo */
     transform: translate(-50%);
     top:-12%;
+}
+
+.portal{
+    position: fixed;
+    left:50%;
+    z-index:1;
+    transform:translate(-50%);
+    top:18%;
+
+    filter: brightness(0.8);
+
+    height: auto; /* mantém a proporção da imagem */
+    width: 90%;
+}
+
+.content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* espaço entre os botões */
+    
+    position: fixed; /* necessário para o z-index e top funcionar */
+    z-index: 2; /* maior que o escudo */
+    top: 50%; /* mexe a posição da horizontal */
+
+    border: 5px solid rgba(86, 179, 255, 0.58);
+    border-radius: 20px;
+    background-color: rgba(86, 179, 255, 0.295);
+
+    padding: 3%;
+    zoom:250%;
+}
+
+button{
+    border: 3px solid rgba(32, 203, 255, 0.573);
+    border-radius: 11px;
+    padding: 3px;
+
+    background-color:rgba(70, 209, 247, 0.537);
+}
+
+button:hover{
+    border: 3px solid rgba(32, 203, 255, 0.749);
+    background-color:rgba(70, 209, 247, 0.724);
 }
