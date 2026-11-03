@@ -1,46 +1,19 @@
 body{
-    background-image: linear-gradient(180deg, rgb(0, 140, 255), rgb(0, 179, 255) 100%);
-    background-repeat: no-repeat;
-    margin: 0;
-    min-height: 100vh;
-}
+    background-image:url("../Imagens/Interface_holográfica_JL.png");
+    background-size:cover; /* preenche toda a tela */
+    background-position:center; /* centraliza a imagem */
+    background-repeat:no-repeat; /* evita repetição */
+    background-attachment:fixed; /* a imagem fica parada ao rolar a página */
 
-table{
-    border-color: white;
-    border-style: solid;
-    border-radius: 20px;
-    border-collapse: separate;
-    margin: 0 auto;
-    padding: 15px;
-}
-
-tr:first-child{
-    background-color:rgb(0, 225, 255);
-    color: black;
-    text-align: center;
-    font-size: 180%;
-}
-
-tr:nth-child(even){
-    background-color:rgba(0, 183, 255, 0.911);
-}
-
-tr:nth-child(odd):not(:first-child){
-    background-color:rgba(1, 83, 205, 0.998);
-}
-
-tr:hover:not(:first-child){
-    background-color:aqua;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 th{
-    border: 5px solid rgba(255, 255, 255, 0.724);
-    border-radius: 10px;
+    color:white;
 }
 
-.card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
+td{
+    color:white;
 }
