@@ -23,7 +23,7 @@ body{
     left:50%;
     z-index:1;
     transform:translate(-50%);
-    top:26%;
+    top:29%;
 
     filter: brightness(1);
 
@@ -52,7 +52,7 @@ body{
 button{
     border: 3px solid rgba(32, 203, 255, 0.573);
     border-radius: 11px;
-    color: rgba(0, 40, 101, 0.758);
+    color: rgba(0, 40, 101, 0.701);
     font-family: fantasy;
     padding: 3px;
     zoom:125%;
@@ -63,4 +63,5 @@ button{
 button:hover{
     border: 3px solid rgba(32, 203, 255, 0.749);
     background-color:rgba(70, 209, 247, 0.724);
+    color:rgba(0, 56, 141, 0.361);
 }
