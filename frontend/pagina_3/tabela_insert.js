@@ -17,10 +17,10 @@ const cancelar_deletar = document.getElementById("cancelar_deletar");
 
 // Abre e fecha o menu
 botao_editar.onclick = () => {
-    if(opcoes.style.display === "none"){  /* muda a teg de deixar escondido none/block */
-        opcoes.style.display = "block";
-    } else{
+    if(opcoes.style.display === "block"){  /* muda a teg de deixar escondido none/block */
         opcoes.style.display = "none";
+    } else{
+        opcoes.style.display = "block";
     }
 }
 
@@ -38,7 +38,7 @@ cancelar_novo.onclick = () => {
 }
 
 // Enviar cadastro
-forms_heroi.onsubmit = (evento) => {
+forms_heroi.onsubmit = (evento) => {  // Aqui não é "onclick", pois queremos capturra o envio do formulario, não apenas clicar em algum lugar dele
     evento.preventDefault();  // Essa parte cancela o comportamento padrão do navegador, assim se tem o controle sobre o que acontece em seguida
 
     const dados = {
@@ -82,14 +82,14 @@ cancelar_deletar.onclick = () => {
 }
 
 // Envio dos dados ao PHP
-forms_deletar.onclick = (evento) => {
+forms_deletar.onsubmit = (evento) => {
     evento.preventDefault();
 
     const dados = {
-        nome: document.getElementById("nome").value
+        nome: document.getElementById("nome_a_deletar").value
     }
 
-    fetch("http://localhost:8000/insert.php", {
+    fetch("http://localhost:8000/delete.php", {
         method: "POST",
         headers: {"Content-Type" : "application/json"},
         body: JSON.stringify(dados)
