@@ -11,6 +11,10 @@ const form_novo = document.getElementById("forms_novo");
 const forms_heroi = document.getElementById("forms_heroi");
 const cancelar_novo = document.getElementById("cancelar_novo");
 
+const forms_delet = document.getElementById("forms_delet");
+const forms_deletar = document.getElementById("forms_deletar");
+const cancelar_deletar = document.getElementById("cancelar_deletar");
+
 // Abre e fecha o menu
 botao_editar.onclick = () => {
     if(opcoes.style.display === "none"){  /* muda a teg de deixar escondido none/block */
@@ -20,6 +24,7 @@ botao_editar.onclick = () => {
     }
 }
 
+//_______________________________________________________________ CADASTRO _______________________________________________________________
 // Abrir formulário de cadastro
 botao_novo.onclick = () => {
     form_novo.style.display = "block";
@@ -59,6 +64,44 @@ forms_heroi.onsubmit = (evento) => {
             select();
         } else{
             alert("Erro ao cadastrar herói!")
+        }
+    });
+}
+
+//_______________________________________________________________ REMOVER _______________________________________________________________
+// Abrir formulario de exclusão
+botao_deletar.onclick = () => {
+    forms_delet.style.display = "block";
+    opcoes.style.display = "none";
+}
+
+// Cancelar exclusão
+cancelar_deletar.onclick = () => {
+    forms_delet.style.display = "none";
+    forms_deletar.reset();
+}
+
+// Envio dos dados ao PHP
+forms_deletar.onclick = (evento) => {
+    evento.preventDefault();
+
+    const dados = {
+        nome: document.getElementById("nome").value
+    }
+
+    fetch("http://localhost:8000/insert.php", {
+        method: "POST",
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify(dados)
+    }).then(r => r.json())
+    .then(r => {
+        if(r.success){
+            forms_deletar.reset();
+            forms_delet.style.display = "none";
+
+            select()
+        } else{
+            alert(r.message);
         }
     });
 }
