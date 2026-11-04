@@ -1,5 +1,5 @@
 // Importando a função
-import {saudar} from './tabela_select_1';
+import {select} from './tabela_select.js';
 
 const botao_editar = document.getElementById("botao_editar");
 const opcoes = document.getElementById("opcoes");

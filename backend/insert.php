@@ -19,13 +19,13 @@
         VALUES (?, ?, ?, ?, ?, ?, ?)
     ");
     $sql -> execute([
-        $body = ["nome"],
-        $body = ["ano"],
-        $bosy = ["url_link"] ? : null,
-        $body = ["origem"] ? : null,
-        $body = ["identidade_secreta"],
-        $body = ["equipe"],
-        $body = ["classificacao"]
+        $body ["nome"],
+        $body ["ano"],
+        $bosy ["url_link"] ? : null,
+        $body ["origem"] ? : null,
+        $body ["identidade_secreta"],
+        $body ["equipe"],
+        $body ["classificacao"]
     ]);
     echo json_encode(["success" => "success"]);
 ?>
