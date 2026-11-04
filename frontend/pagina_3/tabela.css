@@ -17,3 +17,11 @@ th{
 td{
     color:white;
 }
+
+.opcoes{
+    display:none;
+}
+
+.forms_novo{
+    display:none;
+}
