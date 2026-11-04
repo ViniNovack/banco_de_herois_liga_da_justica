@@ -25,8 +25,28 @@
             <h3>Cadastrar Herói</h3>
 
             <form id="forms_heroi">
-                <input type="text" id="nome" placeholder="Nome do herói">
-                
+                <input type="text" id="nome" placeholder="Nome do herói" required> /* required */
+                <input type="number" id="ano" placeholder="Nascimento" required>
+                <input type="text" id="identidade_secreta" placeholder="Identidade secreta" required>
+                <input type="text" id="equipe" placeholder="Equipe" required>
+                <select id="classificacao" required>
+                    <option value="">Selecione a classificação</option>
+                    <option value="urbano">Urbano</option>
+                    <option value="cosmico">Cósmico</option>
+                    <option value="omega">Ômega</option>
+                    <option value="valocista">Velocista</option>
+                    <option value="amazona">Amazona</option>
+                    <option value="lanterna">Lanterna</option>
+                    <option value="magico">Mágico</option>
+                    <option value="mitologico">Mitológico</option>
+                    <option value="cientista">Cientista</option>
+                </select>
+                <input type="text" id="url_link" placeholder="URL da imagem">
+                <textarea id="origem" placeholder="Origem do herói"></textarea>
+
+                <button type="submit">Cadastrar</button>
+                <button type="button" id="cancelar_novo">Cancelar</button>
+
             </form>
         </div>
         
@@ -50,6 +70,7 @@
     </div>
 
 
-    <script src="./tabela.js" defer></script>
+    <script src="./tabela_select_1.js" defer></script>
+    <script src="./tabela_insert.js" defer></script>
 </body>
 </html>
