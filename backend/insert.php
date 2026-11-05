@@ -21,7 +21,7 @@
     $sql -> execute([
         $body ["nome"],
         $body ["ano"],
-        $bosy ["url_link"] ? : null,
+        $body ["url_link"] ? : null,
         $body ["origem"] ? : null,
         $body ["identidade_secreta"],
         $body ["equipe"],
