@@ -1,5 +1,5 @@
 // Importando a função
-import {select} from './tabela_select.js';
+import {select, buscar_heroi} from './tabela_select.js';
 
 const botao_editar = document.getElementById("botao_editar");
 const opcoes = document.getElementById("opcoes");
@@ -14,6 +14,9 @@ const cancelar_novo = document.getElementById("cancelar_novo");
 const forms_delet = document.getElementById("forms_delet");
 const forms_deletar = document.getElementById("forms_deletar");
 const cancelar_deletar = document.getElementById("cancelar_deletar");
+
+const forms_at = document.getElementById("forms_at");
+const form_atualizar = document.getElementById("cancelar_atualizar");
 
 // Abre e fecha o menu
 botao_editar.onclick = () => {
